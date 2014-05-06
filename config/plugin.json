@@ -2,13 +2,19 @@
   "agents": [
     {
       "name" : "postgres01",
-      "monitor-bridge" : "monitor-bridge01.pd.local",
-      "postgresql" : "postgres01.pd.local"
+      "monitor-bridge-host" : "localhost",
+      "monitor-bridge-port" : "17000",
+      "monitor-bridge-username" : "",
+      "monitor-bridge-password" : "",
+      "monitor-bridge-data" : "pgsql01"
     },
     {
       "name" : "postgres02",
-      "monitor-bridge" : "monitor-bridge01.pd.local",
-      "postgresql" : "postgres02.pd.local"
+      "monitor-bridge-host" : "localhost",
+      "monitor-bridge-port" : "17000",
+      "monitor-bridge-username" : "",
+      "monitor-bridge-password" : "",
+      "monitor-bridge-data" : "pgsql02"
     }
   ]
 }

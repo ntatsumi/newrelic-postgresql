@@ -55,7 +55,7 @@
                 <attribute name="Built-Date" value="${TODAY}" />
                 <attribute name="Specification-Version" value="${version}" />
                 <attribute name="Implementation-Version" value="${version} ${TODAY}" />
-                <attribute name="Main-Class" value="blackboard.newrelic.postgresql.Main" />
+                <attribute name="Main-Class" value="blackboard.monitor.newrelic.postgresql.Main" />
             </manifest>
             <fileset dir="${build.classes.dir}"/>
             <zipfileset src="${sdk.jar}" />

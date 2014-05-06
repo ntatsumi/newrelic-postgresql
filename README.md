@@ -5,7 +5,7 @@
 - A New Relic account
 - Java Runtime (JRE) environment Version 1.6 or later
 - [monitor-bridge](https://github.com/blackboard/monitor-bridge)
-- PostgreSQL instance
+- PostgreSQL instance with pg_stat_statement
 
 ----
 
