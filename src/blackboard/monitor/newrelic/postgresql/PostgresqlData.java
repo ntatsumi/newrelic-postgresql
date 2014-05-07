@@ -8,7 +8,10 @@ import java.util.Map;
  * Created by ntatsumi on 5/6/14.
  */
 public enum PostgresqlData {
-    NUMBACKENDS("Numbackends", "processes", "Number of Backends");
+    TOTAL_CONNECTIONS("TotalConnections", "", "Total Connections"),
+    MAX_CONNECTIONS("MaxConnections", "", "Max Connections"),
+    TOTAL_SESSION_TIME_HOURS("TotalSessionTimeHours", "hours", "Total Session Time"),
+    OLDEST_SESSION_TIME_HOURS("OldestSessionTimeHours", "hours", "Oldest Session Duration");
 
     private String key;
     private String unit;

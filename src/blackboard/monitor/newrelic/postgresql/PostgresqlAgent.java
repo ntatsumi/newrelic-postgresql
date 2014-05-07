@@ -87,7 +87,7 @@ public class PostgresqlAgent extends Agent {
         } finally
         {
             try {
-                if(conn != null) conn.close();
+                conn.close();
             } catch (IOException e) {
                 LOG.error("Error closing MbeanServer connection", e);
             }
