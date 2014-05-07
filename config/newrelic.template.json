@@ -3,4 +3,5 @@
   "log_level": "info",
   "log_file_name": "newrelic_plugin.log",
   "log_file_path": "logs"
+  "log_limit_in_kbytes": "25600"
 }
