@@ -11,7 +11,15 @@ public enum PostgresqlData {
     TOTAL_CONNECTIONS("TotalConnections", "", "Total Connections"),
     MAX_CONNECTIONS("MaxConnections", "", "Max Connections"),
     TOTAL_SESSION_TIME_HOURS("TotalSessionTimeHours", "hours", "Total Session Time"),
-    OLDEST_SESSION_TIME_HOURS("OldestSessionTimeHours", "hours", "Oldest Session Duration");
+    OLDEST_SESSION_TIME_HOURS("OldestSessionTimeHours", "hours", "Oldest Session Duration"),
+    DATABASE_SIZE("DatabaseSize", "MB", "Database Size"),
+    TOTAL_LIVE_SIZE("TotalLiveSize", "MB", "Total Live Size"),
+    TOTAL_DEAD_SIZE("TotalDeadSize", "MB", "Total Dead Size"),
+    TOTAL_TABLE_SCANS("TotalTableScans", "MB", "Total Table Scans"),
+    TOTAL_INDEX_SCANS("TotalIndexScans", "MB", "Total Index Scans"),
+    TOTAL_INSERTS("TotalInserts", "MB", "Total Inserts"),
+    TOTAL_UPDATES("TotalUpdates", "MB", "Total Updates"),
+    TOTAL_DELETES("TotalDeletes", "MB", "Total Deletes");
 
     private String key;
     private String unit;
