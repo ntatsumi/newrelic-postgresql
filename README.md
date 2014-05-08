@@ -27,13 +27,87 @@ Check out the [configuration information](#configuration-information) section fo
 
 #### Step 3 - Running the Plugin
 
-To run the plugin, execute the following command from a terminal or command window (assuming Java is installed and on your path):
+Plugin can be ran as a normal process or installed as a daemon process/service
+
+##### Windows
+To run the plugin, execute the following command from a command window:
+
+```
+	wrapper\plugin.bat
+```
+
+or 
 
 ```
 	java -Xmx128m -jar plugin.jar
 ```
 
 **Note:** Though it is not necessary, the '-Xmx128m' flag is highly recommended due to the fact that when running the plugin on a server class machine, the `java` command will start a JVM that may reserve up to one quarter (25%) of available memory, but the '-Xmx128m' flag will limit heap allocation to a more reasonable 128MBs.  
+
+To install the plugin as a service, execute the following command from a command window
+
+```
+  wrapper\InstallPlugin.bat
+```
+
+To run the installed service, execute the following command from a command window
+
+```
+  wrapper\StartPlugin.bat
+```
+
+To stop the installed service, execute the following command from a command window
+
+```
+  wrapper\StopPlugin.bat
+```
+
+To uninstall plugin, execute the following command from a command window
+
+```
+  wrapper\UninstallPlugin.bat
+```
+##### Linux/Mac OS X
+ 
+To run the plugin, execute the following command from a terminal or command window (assuming Java is installed and on your path):
+
+```
+	./wrapper/plugin.sh console
+```
+
+or directly 
+
+```
+	java -Xmx128m -jar plugin.jar
+```
+
+**Note:** Though it is not necessary, the '-Xmx128m' flag is highly recommended due to the fact that when running the plugin on a server class machine, the `java` command will start a JVM that may reserve up to one quarter (25%) of available memory, but the '-Xmx128m' flag will limit heap allocation to a more reasonable 128MBs.  
+
+To install the plugin as a daemon, execute the following command from a terminal window
+
+```
+  ./wrapper/plugin.sh install
+```
+
+To run the installed daemon, execute the following command from a terminal window
+
+```
+  ./wrapper/plugin.sh start
+```
+
+To stop the installed service, execute the following command from a terminal window
+
+```
+  ./wrapper/plugin.sh stop
+```
+
+To uninstall plugin, execute the following command from a terminal window
+
+```
+  ./wrapper/plugin.sh remove
+```
+
+**Note:** You will need to make the script executable, use chmod +x ./wrapper/plugin.sh 
 
 ----
 

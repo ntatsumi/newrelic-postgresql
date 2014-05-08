@@ -16,6 +16,7 @@
     <property name="lib.dir" value="lib" />
     <property name="conf.dir" value="config" />
     <property name="dist.dir" location="dist" />
+    <property name="wrapper.src.dir" location="wrapper" />
 
     <property name="sdk.jar" value="${lib.dir}/metrics_publish-2.0.0.jar" />
 
@@ -26,6 +27,7 @@
     <target name="clean">
         <echo>Cleaning project...</echo>
         <delete dir="${build.dir}" />
+        <delete dir="${dist.dir}" />
         <echo>Done.</echo>
     </target>
 
@@ -63,9 +65,15 @@
     </target>
 
     <target name="dist" depends="jar" description="create a downloadable file">
-        <mkdir dir="${build.tar.src.dir}" />
+    	<echo>Creating directory: ${build.dir}</echo>
+    	<mkdir dir="${dist.dir}" />
+    	<mkdir dir="${build.tar.src.dir}" />
+        <mkdir dir="${build.tar.src.dir}/logs" />
         <copy todir="${build.tar.src.dir}/config">
             <fileset dir="${conf.dir}" />
+        </copy>
+        <copy todir="${build.tar.src.dir}/wrapper">
+            <fileset dir="${wrapper.src.dir}" />
         </copy>
         <copy file="${build.jar.dir}/${jarfile}" todir="${build.tar.src.dir}" />
         <tar compression="gzip" destfile="${dist.dir}/${tarfile}">
