@@ -1,4 +1,4 @@
-# New Relic Platform PostgreSQL Plugin
+# New Relic Platform PostgreSQL Plugin (Prototype)
 
 ## Requirements
 
@@ -9,7 +9,7 @@
 
 ----
 
-## Installation (Manual for now)
+## Installation
 
 #### Step 0 - Building the Plugin
 ```
@@ -27,7 +27,7 @@ Check out the [configuration information](#configuration-information) section fo
 
 #### Step 3 - Running the Plugin
 
-Plugin can be ran as a normal process or installed as a daemon process/service
+Can run as a normal process or installed as a daemon service.
 
 ##### Windows
 To run the plugin, execute the following command from a command window:
